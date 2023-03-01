@@ -1,3 +1,5 @@
+import { separate } from "../../utils";
+
 export const Card = ({
   countryName,
   countryFlag,
@@ -16,7 +18,8 @@ export const Card = ({
         <p className="font-extrabold text-lg">{countryName}</p>
         <div className="pt-4 pb-5 font-semibold flex flex-col space-y-1">
           <p>
-            Population: <span className="font-normal">{population}</span>
+            Population:{" "}
+            <span className="font-normal">{separate(population)}</span>
           </p>
           <p>
             Region: <span className="font-normal">{region}</span>

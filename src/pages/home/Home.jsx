@@ -10,7 +10,6 @@ export const Home = () => {
   const fetchData = async () => {
     const { data } = await axios.get("https://restcountries.com/v3.1/all");
     setCountries(data);
-    console.log(data);
   };
 
   useEffect(() => {

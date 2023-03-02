@@ -8,6 +8,7 @@ export const Cards = ({ data }) => {
           key={index}
           countryName={name.common}
           countryFlag={flags.png}
+          flagAlt={flags.alt}
           population={population}
           region={region}
           capital={capital}

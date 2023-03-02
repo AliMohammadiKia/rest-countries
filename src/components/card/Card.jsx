@@ -4,6 +4,7 @@ import { separate } from "../../utils";
 export const Card = ({
   countryName,
   countryFlag,
+  flagAlt,
   population,
   region,
   capital,
@@ -18,7 +19,7 @@ export const Card = ({
     <div className="bg-white rounded-md overflow-hidden shadow-md hover:scale-105 transition-all">
       <img
         src={countryFlag}
-        alt={countryName}
+        alt={flagAlt}
         className="h-44 bg-contain w-full hover:cursor-pointer"
         onClick={() => handleNavigate(countryName)}
       />

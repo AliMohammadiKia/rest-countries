@@ -31,11 +31,19 @@ export const Home = () => {
       : setFilterCountries(countries);
   };
 
+  const handleFilterCountryByRegion = (e) => {
+    const { target } = e;
+    target.value !== "none"
+      ? setFilterCountries(countries.filter((c) => c.region === target.value))
+      : setFilterCountries(countries);
+  };
+
   return (
     <div className="py-12 px-20 bg-[#fafafa]">
       <SearchBox
         searchCountry={searchCountry}
         handleSearchCountry={handleSearchCountry}
+        handleFilterCountryByRegion={handleFilterCountryByRegion}
       />
       <Cards data={filterCountries} />
     </div>

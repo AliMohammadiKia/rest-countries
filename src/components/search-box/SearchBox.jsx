@@ -1,9 +1,12 @@
 import { SearchCountry, FilterRegion } from "./";
 
-export const SearchBox = () => {
+export const SearchBox = ({ searchCountry, handleSearchCountry }) => {
   return (
     <div className="flex justify-between items-center">
-      <SearchCountry />
+      <SearchCountry
+        searchCountry={searchCountry}
+        handleSearchCountry={handleSearchCountry}
+      />
       <FilterRegion />
     </div>
   );

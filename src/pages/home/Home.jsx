@@ -6,20 +6,38 @@ import { Cards } from "./";
 
 export const Home = () => {
   const [countries, setCountries] = useState([]);
-
-  const fetchData = async () => {
-    const { data } = await axios.get("https://restcountries.com/v3.1/all");
-    setCountries(data);
-  };
+  const [searchCountry, setSearchCountry] = useState("");
+  const [filterCountries, setFilterCountries] = useState([]);
 
   useEffect(() => {
+    const fetchData = async () => {
+      const { data } = await axios.get("https://restcountries.com/v3.1/all");
+      setCountries(data);
+      setFilterCountries(data);
+    };
+
     fetchData();
   }, []);
 
+  const handleSearchCountry = (e) => {
+    const { target } = e;
+    setSearchCountry(target.value);
+    target.value.trim().toLowerCase()
+      ? setFilterCountries(
+          countries.filter(
+            (c) => c.name.common.toLowerCase().indexOf(target.value) !== -1
+          )
+        )
+      : setFilterCountries(countries);
+  };
+
   return (
     <div className="py-12 px-20 bg-[#fafafa]">
-      <SearchBox />
-      <Cards data={countries} />
+      <SearchBox
+        searchCountry={searchCountry}
+        handleSearchCountry={handleSearchCountry}
+      />
+      <Cards data={filterCountries} />
     </div>
   );
 };

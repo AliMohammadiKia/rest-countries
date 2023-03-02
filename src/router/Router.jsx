@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { Home, NotFound } from "../pages";
+import { Home, NotFound, Country } from "../pages";
 import { Navbar } from "../components";
 
 export const Router = () => {
@@ -8,6 +8,7 @@ export const Router = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/:cName" element={<Country />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

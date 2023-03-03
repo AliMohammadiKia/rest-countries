@@ -15,7 +15,7 @@ export const SearchCountry = ({ searchCountry, handleSearchCountry }) => {
         placeholder="Search for a country ..."
         value={searchCountry}
         onChange={handleSearchCountry}
-        className="bg-white dark:bg-d-blue dark:text-l-gray font-semibold py-4 px-16 w-2/3 shadow-md text-sm rounded-md outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
+        className="bg-white w-full dark:bg-d-blue dark:text-l-gray font-semibold py-4 px-16 lg:w-2/3 shadow-md text-sm rounded-md outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
       />
     </div>
   );

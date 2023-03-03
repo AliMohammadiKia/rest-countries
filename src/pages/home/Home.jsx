@@ -39,7 +39,7 @@ export const Home = () => {
   };
 
   return (
-    <div className="py-12 px-20 bg-very-l-gray dark:bg-very-d-blue">
+    <div className="lg:py-12 lg:px-20 py-8 px-5 bg-very-l-gray dark:bg-very-d-blue">
       <SearchBox
         searchCountry={searchCountry}
         handleSearchCountry={handleSearchCountry}

@@ -6,7 +6,7 @@ export const SearchBox = ({
   handleFilterCountryByRegion,
 }) => {
   return (
-    <div className="flex justify-between items-center">
+    <div className="flex flex-col space-y-4 lg:flex-row justify-between items-center">
       <SearchCountry
         searchCountry={searchCountry}
         handleSearchCountry={handleSearchCountry}

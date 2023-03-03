@@ -23,29 +23,29 @@ export const Country = () => {
   }, [cName]);
 
   return (
-    <div className="py-12 px-20 bg-very-l-gray dark:bg-very-d-blue dark:text-very-l-gray">
+    <div className="py-8 px-5 lg:py-12 lg:px-20 bg-very-l-gray dark:bg-very-d-blue dark:text-very-l-gray">
       <button
-        className="bg-white dark:bg-d-blue py-2 px-10 w-[10%] rounded-md shadow-md flex space-x-4 items-center justify-evenly"
+        className="bg-white dark:bg-d-blue py-2 px-10 w-4/12 lg:w-[10%] rounded-md shadow-md flex space-x-4 items-center justify-evenly"
         onClick={() => navigate(-1)}
       >
         <FontAwesomeIcon icon={faArrowLeft} />
         <span>Back</span>
       </button>
       {country ? (
-        <div className="pt-12 flex">
-          <div className="w-6/12">
+        <div className="pt-12 flex flex-col lg:flex-row">
+          <div className="w-full lg:w-6/12">
             <img
               src={country?.flags?.png}
               alt={country?.flags?.alt}
-              className="w-8/12 h-80"
+              className="w-full lg:w-8/12 lg:h-80 h-60"
             />
           </div>
-          <div className="w-6/12 py-6">
+          <div className="w-full lg:w-6/12 py-6">
             <h2 className="font-extrabold text-3xl pb-5">
               {country?.name?.common}
             </h2>
-            <div className="flex pb-8">
-              <div className="w-6/12 font-semibold space-y-2">
+            <div className="flex flex-col space-y-10 lg:flex-row pb-8">
+              <div className="w-full lg:w-6/12 font-semibold space-y-2">
                 <p>
                   Native Name:{" "}
                   <span className="font-light">
@@ -74,7 +74,7 @@ export const Country = () => {
                   <span className="font-light">{country?.capital[0]}</span>
                 </p>
               </div>
-              <div className="w-6/12 font-semibold space-y-2">
+              <div className="w-full lg:w-6/12 font-semibold space-y-2">
                 <p>
                   Top Level Domain:{" "}
                   <span className="font-light">{country?.tld[0]}</span>
@@ -98,9 +98,9 @@ export const Country = () => {
               </div>
             </div>
             {country?.borders && (
-              <div className="flex items-baseline space-x-4">
+              <div className="flex flex-col lg:flex-row lg:items-baseline space-x-4">
                 <p className="font-semibold">Border Countries:</p>
-                <div className="flex space-x-2 space-y-4 flex-wrap items-baseline justify-center">
+                <div className="flex space-x-2 space-y-4 flex-wrap items-baseline justify-start lg:justify-center">
                   {country?.borders.map((cName, index) => (
                     <BorderCountry cName={cName} key={index} />
                   ))}

@@ -16,9 +16,9 @@ export const Navbar = () => {
   };
 
   return (
-    <div className="py-6 px-8 lg:px-20 bg-white dark:bg-d-blue dark:text-very-l-gray shadow-md flex justify-between items-center flex-col space-y-5 lg:flex-row">
+    <div className="py-6 px-5 lg:px-20 bg-white dark:bg-d-blue dark:text-very-l-gray shadow-md flex justify-between items-center">
       <div>
-        <h1 className="font-extrabold lg:text-2xl text-xl">
+        <h1 className="lg:font-extrabold lg:text-2xl font-semibold text-lg">
           Where in the world?
         </h1>
       </div>
@@ -28,9 +28,9 @@ export const Navbar = () => {
       >
         <FontAwesomeIcon
           icon={theme === "light" ? faMoon : faSun}
-          className="text-lg"
+          className="lg:text-lg"
         />
-        <p className="font-semibold">
+        <p className="lg:font-semibold">
           {theme === "light" ? "Dark Mode" : "Light Mode"}
         </p>
       </div>

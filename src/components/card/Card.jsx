@@ -16,7 +16,7 @@ export const Card = ({
   };
 
   return (
-    <div className="bg-white rounded-md overflow-hidden shadow-md hover:scale-105 transition-all">
+    <div className="bg-white dark:bg-d-blue dark:text-very-l-gray rounded-md overflow-hidden shadow-md hover:scale-105 transition-all">
       <img
         src={countryFlag}
         alt={flagAlt}

@@ -18,7 +18,7 @@ export const BorderCountry = ({ cName }) => {
 
   return country ? (
     <Link
-      className="py-1 px-8 bg-white shadow-md text-sm hover:shadow-lg transition-all"
+      className="py-1 px-8 bg-white dark:bg-d-blue dark:text-very-l-gray shadow-md text-sm hover:shadow-lg transition-all"
       to={`/${country[country.length - 1].name.common}`}
     >
       {country[country.length - 1].name.common}

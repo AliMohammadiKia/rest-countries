@@ -23,9 +23,9 @@ export const Country = () => {
   }, [cName]);
 
   return (
-    <div className="py-12 px-20 bg-[#fafafa]">
+    <div className="py-12 px-20 bg-very-l-gray dark:bg-very-d-blue dark:text-very-l-gray">
       <button
-        className="bg-white py-2 px-10 w-[10%] rounded-md shadow-md flex space-x-4 items-center justify-evenly"
+        className="bg-white dark:bg-d-blue py-2 px-10 w-[10%] rounded-md shadow-md flex space-x-4 items-center justify-evenly"
         onClick={() => navigate(-1)}
       >
         <FontAwesomeIcon icon={faArrowLeft} />

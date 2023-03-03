@@ -1,11 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
 
 export const Navbar = () => {
   const [theme, setTheme] = useState("light");
-
-  useEffect(() => {}, [theme]);
 
   const handleSwitchTheme = () => {
     if (theme === "light") {
@@ -18,9 +16,11 @@ export const Navbar = () => {
   };
 
   return (
-    <div className="py-6 px-20 bg-white dark:bg-d-blue dark:text-very-l-gray shadow-md flex justify-between items-center">
+    <div className="py-6 px-8 lg:px-20 bg-white dark:bg-d-blue dark:text-very-l-gray shadow-md flex justify-between items-center flex-col space-y-5 lg:flex-row">
       <div>
-        <h1 className="font-extrabold text-2xl">Where in the world?</h1>
+        <h1 className="font-extrabold lg:text-2xl text-xl">
+          Where in the world?
+        </h1>
       </div>
       <div
         className="flex space-x-2 items-center cursor-pointer"

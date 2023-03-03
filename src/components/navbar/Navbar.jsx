@@ -18,7 +18,7 @@ export const Navbar = () => {
   return (
     <div className="py-6 px-5 lg:px-20 bg-white dark:bg-d-blue dark:text-very-l-gray shadow-md flex justify-between items-center">
       <div>
-        <h1 className="lg:font-extrabold lg:text-2xl font-semibold text-lg">
+        <h1 className="md:font-extrabold md:text-2xl font-semibold text-lg">
           Where in the world?
         </h1>
       </div>
@@ -28,9 +28,9 @@ export const Navbar = () => {
       >
         <FontAwesomeIcon
           icon={theme === "light" ? faMoon : faSun}
-          className="lg:text-lg"
+          className="md:text-lg"
         />
-        <p className="lg:font-semibold">
+        <p className="md:font-semibold">
           {theme === "light" ? "Dark Mode" : "Light Mode"}
         </p>
       </div>

@@ -1,6 +1,6 @@
 export const FilterRegion = ({ handleFilterCountryByRegion }) => {
   return (
-    <div className="w-full flex lg:flex-row-reverse">
+    <div className="w-full flex md:flex-row-reverse">
       <select
         name="filterRegion"
         id="filterRegion"

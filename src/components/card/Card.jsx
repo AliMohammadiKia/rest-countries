@@ -20,7 +20,7 @@ export const Card = ({
       <img
         src={countryFlag}
         alt={flagAlt}
-        className="h-52 lg:h-44 bg-contain w-full hover:cursor-pointer"
+        className="h-52 lg:h-36 xl:h-44 bg-contain w-full hover:cursor-pointer"
         onClick={() => handleNavigate(countryName)}
       />
       <div className="py-5 pl-5">

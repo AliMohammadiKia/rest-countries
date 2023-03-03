@@ -25,19 +25,19 @@ export const Country = () => {
   return (
     <div className="py-8 px-5 lg:py-12 lg:px-20 bg-very-l-gray dark:bg-very-d-blue dark:text-very-l-gray">
       <button
-        className="bg-white dark:bg-d-blue py-2 px-10 w-4/12 lg:w-[10%] rounded-md shadow-md flex space-x-4 items-center justify-evenly"
+        className="bg-white dark:bg-d-blue py-2 px-10 w-4/12 md:w-2/12 lg:w-[10%] rounded-md shadow-md flex space-x-4 items-center justify-evenly"
         onClick={() => navigate(-1)}
       >
         <FontAwesomeIcon icon={faArrowLeft} />
         <span>Back</span>
       </button>
       {country ? (
-        <div className="pt-12 flex flex-col lg:flex-row">
+        <div className="pt-12 flex flex-col items-center lg:flex-row">
           <div className="w-full lg:w-6/12">
             <img
               src={country?.flags?.png}
               alt={country?.flags?.alt}
-              className="w-full lg:w-8/12 lg:h-80 h-60"
+              className="w-full lg:w-8/12 xl:h-80 lg:h-52 md:h-96 h-60"
             />
           </div>
           <div className="w-full lg:w-6/12 py-6">

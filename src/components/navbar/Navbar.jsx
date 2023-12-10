@@ -8,10 +8,12 @@ export const Navbar = () => {
   const handleSwitchTheme = () => {
     if (theme === "light") {
       setTheme("dark");
-      document.body.classList.add("dark");
+      document.documentElement.classList.add("dark");
+      document.body.style.background = "hsl(207, 26%, 17%)";
     } else {
       setTheme("light");
-      document.body.classList.remove("dark");
+      document.documentElement.classList.remove("dark");
+      document.body.style.background = "hsl(0, 0%, 98%)";
     }
   };
 

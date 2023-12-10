@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { separate } from "../../utils";
 import { BorderCountry } from "./BorderCountry";
+import { Loading } from "../../components";
 
 export const Country = () => {
   const { cName } = useParams();
@@ -110,7 +111,9 @@ export const Country = () => {
           </div>
         </div>
       ) : (
-        <div>loading ...</div>
+        <div className="mt-5">
+          <Loading />
+        </div>
       )}
     </div>
   );

@@ -4,7 +4,7 @@ export const FilterRegion = ({ handleFilterCountryByRegion }) => {
       <select
         name="filterRegion"
         id="filterRegion"
-        className="py-4 px-4 shadow-md text-sm rounded-md bg-white dark:bg-d-blue dark:text-very-l-gray"
+        className="py-4 px-4 outline-none focus:ring-2 focus:ring-indigo-500 shadow-md text-sm rounded-md bg-white dark:bg-d-blue dark:text-very-l-gray"
         onChange={handleFilterCountryByRegion}
       >
         <option value="none">Filter by Region</option>
